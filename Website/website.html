@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentale Gesundheit & Social Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #f4f4f8;
+            --text-light: #333;
+            --nav-bg-light: #e0e7ff;
+            --header-bg-light: #4f46e5;
+            --link-light: #1e3a8a;
+
+            --bg-dark: #1e1e2f;
+            --text-dark: #f4f4f8;
+            --nav-bg-dark: #2a2a40;
+            --header-bg-dark: #3f3b94;
+            --link-dark: #8ab4f8;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.dark {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+
+        header {
+            background-color: var(--header-bg-light);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        body.dark header {
+            background-color: var(--header-bg-dark);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            background-color: var(--nav-bg-light);
+            padding: 1rem;
+            position: sticky;
+            top: 4.5rem;
+            z-index: 999;
+        }
+
+        body.dark nav {
+            background-color: var(--nav-bg-dark);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--link-light);
+            font-weight: 600;
+        }
+
+        body.dark nav a {
+            color: var(--link-dark);
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .content {
+            flex: 1 1 600px;
+            min-width: 300px;
+        }
+
+        aside {
+            flex: 0 0 250px;
+            min-width: 250px;
+        }
+
+        .infobox {
+            background-color: var(--nav-bg-light);
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        body.dark .infobox {
+            background-color: #3a3a5e;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        h1, h2 {
+            color: #1e40af;
+        }
+
+        footer {
+            background-color: #4f46e5;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            aside {
+                order: 2;
+            }
+        }
+
+        .toggle-mode {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: white;
+            color: #4f46e5;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mentale Gesundheit & Social Media</h1>
+        <p>Informationen und Tipps für Jugendliche und junge Erwachsene</p>
+        <button class="toggle-mode" onclick="toggleDarkMode()">🌓 Modus wechseln</button>
+    </header>
+    <nav>
+        <a href="#start">Start</a>
+        <a href="#wissen">Wissen</a>
+        <a href="#tipps">Tipps</a>
+        <a href="#ressourcen">Ressourcen</a>
+        <a href="#ueberuns">Über uns</a>
+    </nav>
+    <main>
+        <div class="content">
+            <section id="start">
+                <h2>Willkommen!</h2>
+                <p>Soziale Medien sind ein fester Bestandteil deines Alltags? Hier erfährst du, wie sie deine psychische Gesundheit beeinflussen können – positiv wie negativ – und was du tun kannst, um gut mit ihnen umzugehen.</p>
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=900&q=80" alt="Symbolbild Social Media" style="width:100%; border-radius:10px; margin-top:1rem;">
+            </section>
+
+            <section id="wissen">
+                <h2>Wissenswertes</h2>
+                <p>Studien zeigen, dass exzessive Social-Media-Nutzung mit Stress, Schlafproblemen und geringem Selbstwert einhergehen kann. Gleichzeitig können Plattformen aber auch Gemeinschaft und Unterstützung bieten. Entscheidend ist, <strong>wie</strong> du sie nutzt.</p>
+            </section>
+
+            <section id="tipps">
+                <h2>Tipps für einen gesunden Umgang</h2>
+                <ul>
+                    <li>Lege regelmäßig bildschirmfreie Zeiten ein</li>
+                    <li>Deaktiviere Push-Benachrichtigungen</li>
+                    <li>Folge Accounts, die dich inspirieren statt stressen</li>
+                    <li>Reflektiere: Wie fühlst du dich nach der Nutzung?</li>
+                </ul>
+            </section>
+
+            <section id="ressourcen">
+                <h2>Hilfreiche Ressourcen</h2>
+                <ul>
+                    <li><a href="https://www.nummergegenkummer.de/" target="_blank">Nummer gegen Kummer</a></li>
+                    <li><a href="https://www.bke-beratung.de/" target="_blank">bke-Jugendberatung</a></li>
+                    <li><a href="https://www.safe-the-web.de/" target="_blank">Safe the Web</a></li>
+                </ul>
+            </section>
+
+            <section id="ueberuns">
+                <h2>Über uns</h2>
+                <p>Wir sind eine Projektgruppe aus dem SoSe 2025 und setzen uns für mehr Aufklärung rund um mentale Gesundheit in der digitalen Welt ein. Diese Webseite entstand im Rahmen einer universitären Übung.</p>
+            </section>
+        </div>
+
+        <aside>
+            <div class="infobox">
+                <strong>Wusstest du?</strong>
+                <p>Mehr als 3 Milliarden Menschen weltweit nutzen Social Media.</p>
+            </div>
+            <div class="infobox">
+                <strong>Tipp:</strong>
+                <p>Stelle Bildschirmzeit-Benachrichtigungen ein, um bewusster zu bleiben.</p>
+            </div>
+            <div class="infobox">
+                <strong>Zitat:</strong>
+                <p>„Nicht jede Nachricht muss sofort beantwortet werden.“</p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        &copy; 2025 Mentale Gesundheit & Social Media | Hochschulprojekt
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark');
+        }
+    </script>
+</body>
+</html>
