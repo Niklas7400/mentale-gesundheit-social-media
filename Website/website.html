@@ -144,6 +144,61 @@
             cursor: pointer;
             font-weight: bold;
         }
+        
+         nav {
+            display: flex;
+            justify-content: center;
+            background-color: #e0e7ff;
+            padding: 1rem;
+            gap: 1.5rem;
+        }
+        nav .dropdown {
+            position: relative;
+        }
+        nav .dropbtn {
+            text-decoration: none;
+            color: #1e3a8a;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #e0e7ff;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        }
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        nav .dropdown-content a {
+            display: block;
+            padding: 10px 16px;
+            text-decoration: none;
+            color: #1e3a8a;
+            font-weight: 400;
+        }
+        nav .dropdown-content a:hover {
+            background-color: #c7d2fe;
+        }
+        /* Zunächst Mal ist alles ausgeblendet*/
+        main section {
+            display: none;
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+        /* Ziel Element in voller Breite zeigen */
+        main section:target {
+            display: block;
+        }
+
+        /* Standardanzeige: Wenn keine Section getargetet wird, dann zeige #start */
+        body:not(:has(:target)) #start {
+            display: block;
+        }
+        
     </style>
 </head>
 <body>
@@ -153,11 +208,16 @@
         <button class="toggle-mode" onclick="toggleDarkMode()">🌓 Modus wechseln</button>
     </header>
     <nav>
+         <div class="dropdown">
+            <span class="dropbtn">Willkommen!</span>
+            <div class="dropdown-content">
         <a href="#start">Start</a>
         <a href="#wissen">Wissen</a>
         <a href="#tipps">Tipps</a>
         <a href="#ressourcen">Ressourcen</a>
         <a href="#ueberuns">Über uns</a>
+          </div>
+        </div>
     </nav>
     <main>
         <div class="content">
