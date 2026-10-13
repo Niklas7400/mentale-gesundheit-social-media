@@ -4,6 +4,8 @@ Einseitige Informationswebsite für Jugendliche und junge Erwachsene darüber, w
 
 > **Hinweis:** Die Website ist ein Studienprojekt und ersetzt keine medizinische oder psychologische Beratung.
 
+**Demo:** <https://niklas7400.github.io/mentale-gesundheit-social-media/>
+
 ## Inhalt der Website
 
 Fünf Abschnitte, die über ein Menü per Anker (`#start`, `#wissen`, `#tipps`, `#ressourcen`, `#ueberuns`) umgeschaltet werden:
