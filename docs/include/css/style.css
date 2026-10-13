@@ -33,17 +33,23 @@ header {
     color: white;
     padding: 1.5rem;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: relative;
 }
 
 body.dark header {
     background-color: var(--header-bg-dark);
 }
 
-h1, h2 {
+h1 {
     color: white;
+}
+
+h2 {
+    color: #1e40af;
+}
+
+body.dark h2 {
+    color: var(--link-dark);
 }
 
 nav {
@@ -54,7 +60,7 @@ nav {
     background-color: var(--nav-bg-light);
     padding: 1rem;
     position: sticky;
-    top: 4.5rem;
+    top: 0;
     z-index: 999;
 }
 
